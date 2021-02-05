@@ -25,21 +25,21 @@ const AddressForm = ({ checkoutToken, next }) => {
 
 		setShippingCountries(countries);
 		setShippingCountry(Object.keys(countries)[0]);
-	}
+	};
 
 	const fetchSubdivisions = async (countryCode) => {
 		const { subdivisions } = await commerce.services.localeListSubdivisions(countryCode);
 
 		setShippingSubdivisions(subdivisions);
 		setShippingSubdivision(Object.keys(subdivisions)[0]);
-	}
+	};
 
 	const fetchShippingOptions = async (checkoutTokenId, country, region = null) => {
 		const options = await commerce.checkout.getShippingOptions(checkoutTokenId, { country, region });
 
 		setShippingOptions(options);
 		setShippingOption(options[0].id);
-	}
+	};
 
 	useEffect(() => {
 		fetchShippingCountries(checkoutToken.id)
@@ -99,6 +99,6 @@ const AddressForm = ({ checkoutToken, next }) => {
 			</FormProvider>
 		</>
 	);
-}
+};
 
 export default AddressForm;

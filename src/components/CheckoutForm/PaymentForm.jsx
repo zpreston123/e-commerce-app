@@ -37,7 +37,7 @@ const PaymentForm = ({ checkoutToken, shippingData, backStep, onCaptureCheckout,
 						payment_method_id: paymentMethod.id
 					}
 				}
-			}
+			};
 
 			onCaptureCheckout(checkoutToken.id, orderData);
 
@@ -45,7 +45,7 @@ const PaymentForm = ({ checkoutToken, shippingData, backStep, onCaptureCheckout,
 
 			nextStep();
 		}
-	}
+	};
 
 	return (
 		<>
@@ -70,6 +70,6 @@ const PaymentForm = ({ checkoutToken, shippingData, backStep, onCaptureCheckout,
 			</Elements>
 		</>
 	);
-}
+};
 
 export default PaymentForm;

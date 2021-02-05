@@ -9,6 +9,6 @@ const FormInput = ({ name, label }) => {
 			<Controller as={TextField} defaultValue="" control={control} fullWidth name={name} label={label} required />
 		</Grid>
 	);
-}
+};
 
 export default FormInput;
